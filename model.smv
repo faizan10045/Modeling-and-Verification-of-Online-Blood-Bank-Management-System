@@ -1,0 +1,172 @@
+MODULE main
+VAR
+	state: {s0, s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12};
+
+page-HospitalsHub: boolean;
+page-Homepage:boolean;
+page-LoginPage: boolean;
+page-Authentication: boolean;
+page-LoginFailed: boolean;
+page-BloodBankSystem: boolean;
+page-BloodGroup: boolean;
+page-FetchBloodGroupList: boolean;
+page-BloodGroupList: boolean;
+page-PatientDetails: boolean;
+page-LaboratoryTests: boolean;
+page-DonateBlood: boolean;
+page-Exit: boolean;
+link-HospitalsHub: boolean;
+link-LoginPage: boolean;
+link-BloodGroup: boolean;
+call-Authentication: boolean;
+call-DonateBlood: boolean;
+call-FetchBloodGroupList: boolean;
+build-BloodBankSystem: boolean;
+build-LoginFailed: boolean;
+build-BloodGroupList: boolean;
+build-PatientDetails: boolean;
+build-LaboratoryTests: boolean;
+
+
+ASSIGN
+init(state):= s0;
+init(page-Homepage):=TRUE;
+init(page-LoginPage):=FALSE;
+init(page-Authentication):=FALSE;
+init(page-HospitalsHub):=FALSE;
+init(page-LoginFailed):=FALSE;
+init(page-BloodBankSystem):=FALSE;
+init(page-BloodGroup):=FALSE;
+init(page-FetchBloodGroupList):=FALSE;
+init(page-BloodGroupList):=FALSE;
+init(page-PatientDetails):=FALSE;
+init(page-LaboratoryTests):=FALSE;
+init(page-DonateBlood):=FALSE;
+init(page-Exit):=FALSE;
+init(link-HospitalsHub):=TRUE;
+init(link-LoginPage):=TRUE;
+init(link-BloodGroup):=FALSE;
+init(call-Authentication):=FALSE;
+init(call-DonateBlood):=FALSE;
+init(call-FetchBloodGroupList):=FALSE;
+init(build-BloodBankSystem):=FALSE;
+init(build-LoginFailed):=FALSE;
+init(build-BloodGroupList):=FALSE;
+init(build-PatientDetails):=FALSE;
+init(build-LaboratoryTests):=FALSE;
+
+next(state):=case
+             state=s0: {s1,s2};
+			 state=s1: s12;
+			 state=s2: s3;
+			 state=s3: {s4,s5};
+			 state=s4: {s6,s9};
+			 state=s5: s2;
+			 state=s6: s7;
+			 state=s7: s8;
+			 state=s8: s12;
+			 state=s9: s10;
+			 state=s10: s11;
+			 state=s11: s6;
+			 state=s12: s12;
+			 TRUE: state;
+esac;
+
+
+next(page-Homepage):=case
+             next(state)=s0: TRUE;
+             TRUE:FALSE;
+esac;
+next(page-HospitalsHub):=case
+             next(state)=s1: TRUE;
+             TRUE:FALSE;
+esac;
+next(page-LoginPage):=case
+             next(state)=s2: TRUE;
+             TRUE:FALSE;
+esac;
+next(page-Authentication):=case
+             next(state)= s3:TRUE;
+			 TRUE:FALSE;
+esac;
+
+next(page-LoginFailed):=case
+             next(state)=s5:TRUE;
+			 TRUE:FALSE;
+esac;
+next(page-BloodBankSystem):=case
+             next(state)=s4:TRUE;
+			 TRUE:FALSE;
+esac;
+next(page-BloodGroup):=case
+             next(state)=s6:TRUE;
+			 TRUE:FALSE;
+esac;
+next(page-FetchBloodGroupList):=case
+             next(state)=s7:TRUE;
+			 TRUE:FALSE;
+esac;
+next(page-BloodGroupList):=case
+	     next(state)=s8:TRUE;
+			 TRUE:FALSE;
+esac;
+next(page-PatientDetails):=case
+             next(state)=s10:TRUE;
+			 TRUE:FALSE;
+esac;
+next(page-DonateBlood):=case
+             next(state)=s9:TRUE;
+			 TRUE:FALSE;
+esac;
+next(page-LaboratoryTests):=case
+             next(state)=s11:TRUE;
+			 TRUE:FALSE;
+esac;
+next(page-Exit):=case
+             next(state)=s12:TRUE;
+			 TRUE:FALSE;
+esac;
+next(link-HospitalsHub):=case
+             next(state)=s0: TRUE;
+             TRUE: FALSE;
+esac;
+next(link-LoginPage):=case
+             next(state)=s0: TRUE;
+             TRUE: FALSE;
+esac;
+next(link-BloodGroup):=case
+             next(state)=s4|next(state)=s11: TRUE;
+             TRUE: FALSE;
+esac;
+next(call-Authentication):=case
+             next(state)=s2: TRUE;
+             TRUE: FALSE;
+esac;
+next(call-DonateBlood):=case
+             next(state)=s4: TRUE;
+             TRUE: FALSE;
+esac;
+next(call-FetchBloodGroupList):=case
+             next(state)=s6: TRUE;
+             TRUE: FALSE;
+esac;
+next(build-BloodBankSystem):=case
+             next(state)=s3: TRUE;
+             TRUE: FALSE;
+esac;
+next(build-LoginFailed):=case
+             next(state)=s3: TRUE;
+             TRUE: FALSE;
+esac;
+next(build-BloodGroupList):=case
+             next(state)=s7: TRUE;
+             TRUE: FALSE;
+esac;
+next(build-PatientDetails):=case
+             next(state)=s9: TRUE;
+             TRUE: FALSE;
+esac;
+next(build-LaboratoryTests):=case
+             next(state)=s10: TRUE;
+             TRUE: FALSE;
+esac;
