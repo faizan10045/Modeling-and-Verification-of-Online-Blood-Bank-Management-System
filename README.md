@@ -7,7 +7,7 @@ Keywords: Online Blood Bank Management System, Kripke Structure, Linear Temporal
 Checkout the project's medium post for interesting details in brief here- https://medium.com/@faizan.kletech/modeling-and-verification-using-nusmv-5c7ac815819c
 
 Project Demo-
-
+![](demo5.gif)
 
 Download NuSMV tool accrording to Operating System Requirements, along with other necessary tools and packages such as Git, Java, etc., or watch NuSMV tool installation on Youtube.
 
