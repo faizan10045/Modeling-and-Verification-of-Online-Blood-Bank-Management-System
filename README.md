@@ -1,10 +1,13 @@
 # Modeling-and-Verification-of-Online-Blood-Bank-Management-System
 
-With the advent of technology, there have been drastic advancements in the field of healthcare. While a doctor’s skills and diagnosis are important in medicine, with modeling and verification, quality and correctness of the system play a crucial role. The donation of blood can save people, especially those who are cancer patients or people who have met with an accident. Therefore, there is a need for a system to monitor the page navigation system’s correctness which in turn can make sure more people get the blood transfusions they need.
-
 This paper proposes a model checking and verification approach for an Online Blood Bank Management System. The Blood Bank has been modeled in the form of the page navigation system and atomic proposition transitions. To represent the behavior of the system, we use the Kripke structure and to simulate the sequential logic and computation of the model we use Finite State Machine (FSM). Further to identify the correctness of the model, we use formal language specifications such as Linear Temporal Logic (LTL) and Computation Tree Logic (CTL). The complete automation for checking and verification of the model can be done using the NuSMV (New Symbolic Model Verifier) tool.
 
 Keywords: Online Blood Bank Management System, Kripke Structure, Linear Temporal Logic, Computation Tree Logic, NuSMV.
+
+Checkout the project's medium post for interesting details in brief here- https://medium.com/@faizan.kletech/modeling-and-verification-using-nusmv-5c7ac815819c
+
+Project Demo-
+
 
 Download NuSMV tool accrording to Operating System Requirements, along with other necessary tools and packages such as Git, Java, etc., or watch NuSMV tool installation on Youtube.
 
