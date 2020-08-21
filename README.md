@@ -1,6 +1,6 @@
 # Modeling-and-Verification-of-Online-Blood-Bank-Management-System
 
-This paper proposes a model checking and verification approach for an Online Blood Bank Management System. The Blood Bank has been modeled in the form of the page navigation system and atomic proposition transitions. To represent the behavior of the system, we use the Kripke structure and to simulate the sequential logic and computation of the model we use Finite State Machine (FSM). Further to identify the correctness of the model, we use formal language specifications such as Linear Temporal Logic (LTL) and Computation Tree Logic (CTL). The complete automation for checking and verification of the model can be done using the NuSMV (New Symbolic Model Verifier) tool.
+This project proposes a model checking and verification approach for an Online Blood Bank Management System. The Blood Bank has been modeled in the form of the page navigation system and atomic proposition transitions. To represent the behavior of the system, we use the Kripke structure and to simulate the sequential logic and computation of the model we use Finite State Machine (FSM). Further to identify the correctness of the model, we use formal language specifications such as Linear Temporal Logic (LTL) and Computation Tree Logic (CTL). The complete automation for checking and verification of the model can be done using the NuSMV (New Symbolic Model Verifier) tool.
 
 Keywords: Online Blood Bank Management System, Kripke Structure, Linear Temporal Logic, Computation Tree Logic, NuSMV.
 
